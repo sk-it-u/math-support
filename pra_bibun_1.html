@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>行ごとの表示・非表示</title>
+<style>
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 10px;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>演習　基本的な微分</h2>
+
+  <div class="item">
+    <button onclick="toggle(this)">問題</button>
+    <div class="hidden">2x<sup>3</sup>+3x<sup>2</sup>+2x+2</div>
+  </div>
+  <div class="item">
+    <button onclick="toggle(this)">答え</button>
+    <div class="hidden">6x<sup>2</sup>+6x+2</div>
+  </div>
+  <div class="item">
+    <button onclick="toggle(this)">ヒント①</button>
+    <div class="hidden">微分の公式 (x<sup>a</sup>+b)'=ax<sup>a-1</sup>+b より、xの右肩の数(指数)を係数にかけ、指数から1を引く。</div>
+  </div>
+  <div class="item">
+    <button onclick="toggle(this)">ヒント②</button>
+    <div class="hidden">x<sup>0</sup>=1</div>
+  </div>
+</div>
+
+<script>
+function toggle(btn) {
+  const line = btn.nextElementSibling;
+  line.classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>

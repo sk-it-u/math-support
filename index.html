@@ -1,127 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.5" />
-  <title>数学成績支援</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body, html {
-      height: 100%;
-    }
-    .center-container {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .menu-wrapper {
-      width: 580px; /* ２列分を確保 */
-    }
-    .menu-button {
-      width: 100%;
-      margin-bottom: 1rem;
-      text-align: center;
-      background-color: #004080;
-      color: white;
-      border: none;
-    }
-    .menu-button:hover {
-      background-color: #0066cc;
-    }
-    details summary {
-      list-style: none;
-      cursor: pointer;
-    }
-    details > div {
-      padding-left: 1rem;
-    }
-    details a, .custom-link-button {
-      width: 100%;
-      margin-bottom: 0.75rem;
-      background-color: #e6f0ff;
-      color: #004080;
-      border: 1px solid #004080;
-      padding: 0.5rem;
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    details a:hover, .custom-link-button:hover {
-      background-color: #cce0ff;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>ホーム</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+  }
+  .container {
+    text-align: center;
+  }
+  details {
+    margin: 1em 0;
+    text-align: center;  /* ←ここをcenterにする */
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;  /* ←リストが中央に寄る */
+    text-align: left;       /* ←リストの中身は左揃え */
+  }
+  li {
+    margin: 0.3em 0;
+  }
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+</style>
 </head>
 <body>
-  <div class="container center-container">
-    <div class="text-center menu-wrapper">
+<div class="container">
+  <h1>微積基礎勉強用サイト</h1>
 
-      <h1 class="mb-4">数学成績支援</h1>
-       <p class="text-muted mb-4">遷移先ページ作成中</p>
+  <details>
+    <summary>公式</summary>
+    <ul>
+      <li><a href="sakuseityuu.html">微分</a></li>
+      <li><a href="sakuseityuu.html">積分</a></li>
+    </ul>
+  </details>
 
-      <!-- Row1: 基礎数学 を中央寄せ -->
-      <div class="row mb-4 justify-content-center">
-        <div class="col-6">
-          <details>
-            <summary class="menu-button">基礎数学</summary>
-            <div>
-              <a href="#" class="custom-link-button">小テスト前</a>
-              <a href="#" class="custom-link-button">小テスト後</a>
-            </div>
-          </details>
-        </div>
-      </div>
+  <details>
+    <summary>演習</summary>
+    <ul>
+      <li><a href="practice_bibun.html">微分</a></li>
+      <li><a href="sakuseityuu.html">積分</a></li>
+    </ul>
+  </details>
 
-      <!-- Row2: 線形代数 & 微分積分 -->
-      <div class="row mb-4">
-        <div class="col-6">
-          <details>
-            <summary class="menu-button">線形代数</summary>
-            <div>
-              <a href="#" class="custom-link-button">線形代数基礎</a>
-              <a href="#" class="custom-link-button">線形代数応用</a>
-            </div>
-          </details>
-        </div>
-        <div class="col-6">
-          <details>
-            <summary class="menu-button">微分積分</summary>
-            <div>
-              <a href="#" class="custom-link-button">微分積分基礎</a>
-              <a href="#" class="custom-link-button">微分積分応用</a>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <!-- Row3: 幾何 & 統計学 -->
-      <div class="row mb-4">
-        <div class="col-6">
-          <details>
-            <summary class="menu-button">幾何</summary>
-            <div>
-              <a href="#" class="custom-link-button">第7回以前</a>
-              <a href="#" class="custom-link-button">第8回以降</a>
-            </div>
-          </details>
-        </div>
-        <div class="col-6">
-          <details>
-            <summary class="menu-button">統計学</summary>
-            <div>
-              <a href="#" class="custom-link-button">統計学基礎</a>
-              <a href="#" class="custom-link-button">統計学応用</a>
-            </div>
-          </details>
-        </div>
-      </div>
-
-     
-
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</div>
 </body>
 </html>

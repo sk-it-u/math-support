@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>合成関数の微分法</title>
+<style>
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 10px;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>演習　合成関数の微分法</h2>
+
+  <div class="item">
+    <button onclick="showText(this)">問題</button>
+    <div class="hidden">
+      次の関数を微分せよ。sin<sup>3</sup>x+2
+      <br><button onclick="hideText(this)">閉じる</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <button onclick="showText(this)">途中式①</button>
+    <div class="hidden">
+      t<sup>3</sup>+2, t=sinx
+      <br><button onclick="hideText(this)">閉じる</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <button onclick="showText(this)">途中式②</button>
+    <div class="hidden">
+      (t<sup>3</sup>+2)'=3t<sup>2</sup> , t'=(sinx)'=cosx
+      <br><button onclick="hideText(this)">閉じる</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <button onclick="showText(this)">答え</button>
+    <div class="hidden">
+      3sin<sup>2</sup>xcosx
+      <br><button onclick="hideText(this)">閉じる</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <button onclick="showText(this)">ヒント①</button>
+    <div class="hidden">
+      合成関数の微分法：そのままでは解けない式を、解ける式の組み合わせにする方法。
+      <br><button onclick="hideText(this)">閉じる</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <button onclick="showText(this)">ヒント②</button>
+    <div class="hidden">
+      合成関数の微分は、式で表すと f(x)=f(g(x)) , f'(x)=f'(g(x))×g'(x)
+      <br><button onclick="hideText(this)">閉じる</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <button onclick="showText(this)">ヒント③</button>
+    <div class="hidden">
+      f(x)=f(t) , この問題では t=sinx とすると、f(t)=t<sup>3</sup> にできる
+      <br><button onclick="hideText(this)">閉じる</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ボタン→テキスト
+function showText(btn) {
+  const text = btn.nextElementSibling;
+  btn.classList.add('hidden');
+  text.classList.remove('hidden');
+}
+
+// テキスト→ボタン
+function hideText(closeBtn) {
+  const text = closeBtn.parentElement;
+  const btn = text.previousElementSibling;
+  text.classList.add('hidden');
+  btn.classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
